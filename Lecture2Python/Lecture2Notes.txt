@@ -1,0 +1,23 @@
+Use the python3 command in terminal to interpret .py files.
+Variable assignment in python is done using an equal sign and you dont have to specify the type of a variable ie: integer, string, boolean etc.
+There is a special nonetype using None. This represewnts the absence of a value.
++ is a concatenator in python.
+To use format string use the letter f before the quotation marks. If you want to keep the whole expression inside the speech marcks add {} and then put the variable name inside the curly brackets to tell python to substitute the variable name for the variable value. EXample on next line.
+print(f"Hello, {name}")
+Python also supports conditions like literally any programming language.
+Indentation is required in python but in languages like html it is advisable but not required.
+You can use a tupple to store 2 values together such as coordinates rather than creating two seperate variablkes by writing coordinates = (10.4, 20.3)
+There are 4 main types of data structures: a list which is a sequence which can be added to or taken away from , a tuple which you can not add or take away from, a set which is a collection of unique values and a dict (dictionary) which is a collection of key value pairs.
+You can use a hash to add a comment to keep track of changes or notes.
+the len command allows you to see the number of items in a string, list or set.
+You can use loops using for. (counter controlled).
+the the def command defines what a function should do.
+You can import functions from other files. This is done by putting from <fileName> import <functionName> or you can say import <fileName> but then when using a function you have to specify the fileName.functionName when using it in your code.
+the variable self refers to the object itself.
+Refer to classes.py to see how Object Oriented Programming can be applied using python.
+Decorators take in a function as input and output a modified version of the function. Decorators basically add extra capabilities to functions.
+You can use the prebulit lambda function to sort a list if python can not automatically order it because it doesn't know on what basis to order it by using a command along the lines of 
+people.sort(key=lambda person: person["name"])
+This line will sort the people in the list based on their names in alphabetical order. The lambda function is a simpler and more concise way to sort lists or dictionaries rather that creating a new function using def and return.
+To deal with exceptions like these you can use the try command to check if the intended output is possible, if this is not the case you can use the except command as except <ErrorName> and then just print a nicer looking error of your choosing.
+You can then exit the program by using the commmand sys.exit(1) however for this you must have import sys at the top of your code. Sys is a python module that allows the executing code to be exited easily.
