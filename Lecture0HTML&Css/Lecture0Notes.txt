@@ -1,0 +1,75 @@
+Standard html format: 
+<!DOCTYPE html>
+<html lang="en">
+<html>
+      <head>
+            <title>Hello!</title>
+      </head>
+      <body>
+            Hello, world!
+      </body>
+</html>
+
+Standard css viewport compatibility line:
+<meta name="viewport" content="width-device, initial scale=1.0">
+
+Bootstrap pre made styling stylesheet code:
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+
+Document Object Model is a tree like structure visually describing what html elements are inside other elements ie: head and body are under the parent element of html.
+when an elements is inside another element it is called a nested element.
+<ol> is the tag for an ordered list while <li> add the item to the list. (list item element)
+use <ul> for unordered lists. These do not have numbers but just regular bullet points.
+Attributes such as lang help web browsers sort webpages.
+src attribute is the source so like the file name ie: panda.jpg
+alt attribute is some alternative text that the browser can display if the image can't be rendered.
+The <img> element does not have a closing tag, it is self closing.
+width elemt controls width of the image and scales height to keep it proportional.
+<a tag is an anchor tag that allows for the use of href (hyperlink reference) which allows us to send the user to other pages.
+You can use href to link to seperate websites entirely but also other pages on the same website such as image.html!
+<table> creates a table. inside that element you can use <thead> and then <th> to create a new heading in the table. 
+Inside <tbody> (body of the table> you have <tr> which stands for table row.
+Inside table row you have <td> which stands for table data where you input the information you want.
+A place where a user can input information into a page is known as a form.
+the type attribute is what type of data the website will recieve.
+type=submit allows the user to submit the form.
+ The placeholder attribute allows for placeholder text to be added.
+ If the type attribute equates to password the browser will display the typed characters as dots rather than the actual; characters for security reasons
+Radio inputs are also possible. (choosing from between many options by clicking a button)
+A datalist element allows for the website to narrow down the options when a user is using a drop down menu such as when a user needs to say which country they are from.
+End of HTML section of Lecture 0 about HTML and CSS.
+CSS (Cascading Style Sheets) Section Begins:
+CSS allows you to style your webpages and not have it just be black and white text.
+The style attribute allows us to change properties such as color. You can add multiple properties to the same element. Color changes the color, text-align changes how the text is aligned and so on.
+Put a style element directly inside the head element if you want say all h1 headings to be blue and center aligned to reduce the need for copying code which makes redundant and harder to debug code.
+To prevent redndant code when multiple webpages need to be used keep a completely seperate file for styling. Generally called styles.css.
+Use the link element to relay the styling to the webpage and use th rel attribute and stylesheet to tell web browsers that the file is the styling file.
+The <div> tag just divides the page and allows us to code different sections of the webpage.
+You can add a padding attribute so that text or the element is not on the border of the div.
+You can also add a margin attribute so the doiv itsel;f is away from the webpage border.
+You can also use css to change the font of text.
+You use the font-family attribute to change the font and you can add a comma and add a fallback font incase the first font is not supported by a specific browser.
+You can use font-size to change the size of the text and font-weight to display it is as bold or italic or underlined.
+You can use a comma to style multiple elements with the same styling rather than creating redundancy. These are known as css selectors.
+Id should only be used when the element is unique, if it is not unique you use a class attribute.
+If there are conflicting styling say two colors that could be added to an element, then there is an order os specificity. If it is inline styling that takes perecedent over id styling which takes precedent over class styling and the last thing in the order of specificity is type such as h1 or h2.
+There is 7 different css selectors the comma being the multiple element selector. However there are 6 others descendant, child, adjacent sibling, attribute, pseudoclass and pseudoelement.
+You can also have sublists (lists nested inside other lists). This is useful for styling.
+A descendant selector styles all elements that are descendants of the parent element and is more generic and written with a space while a child selector is more specific and only styles the direct children of the element. This is not visual in simple webpages but more identifiable in more complex webpages.
+A child selector is shown using a > greather than sign.
+An attribute selector can be used to highlight certain text, hyperlinks or element by referncing their tag and then their attribute ie; a [href=""].
+Use the button element to create a button.
+You can use a psuedoclass slector shown as a colon to give extra information while styling when an event occurs so like if the user hovers over a button you can use button:hover to change color or font and so on.
+Responsive design is making sure that the webpage works on all devices and operating systems.
+The viewport is one thing we can change to make sure the sizing is optimised to any device using the css code <meta name="viewport" content="width-device, initial scale=1.0">
+Another useful way to control what a page looks like depending on browser using media queries.
+This is done by using @media to do something when a criteria has been met say change the color of the page when the screen becomes smaller.
+You can use the display elemnt to hide or show things on the webpage based on the device or browser.
+FlexBox is a tool in css that wraps elemnts onto the next line of the webpage if there isnt enough space on the width of the device and/or screen. Flexbox is a layout type in css. One other example is the grid layout.
+The display elemnt being specified is required for layouts to work in css.
+Bootstrap is a css library with pre written code  for styling that anyone can use by copying the code from Bootstrap's website. To use bootstrap styling cop the code at the top of the notes.
+Bootstrap columns use a 12 way split so aslong as your columns add up to 12 column units it will be mobile responsive. You can also use lg and sm to describe how your webpage should display on large and small screens.
+SAS is an extension of css (however it is a different language and has the file extension .scss) which allows for variables to be created and reduce duplication of redundant code. Using variables avoids repitition.
+Browser don't recognise sass so you need to download sass on your device so it can convert the file into normal css that browsers can understand and use to style your page.
+SASS also allows us to nest selectors inside of each other.
+SASS also has a simpler final product and nicer syntax.
