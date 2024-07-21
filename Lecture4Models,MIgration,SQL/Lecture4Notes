@@ -1,0 +1,52 @@
+In a relational database you generally store data in a table with rows an columns.
+SQL is a database storage system with variants that are data management companies that help you store data such as MySQL or SQLite.
+SQLite has types of data such as text, integer, numeric and so on.
+However heavier services like MySQL which store data on servers have more options such as char to store data where you knopwn the maximum length such as a postcode or a float data.
+To create a table in SQL you use:
+CREATE TABLE "Name"(
+      Id integer PRIMARY KEY AUTOINCREMENT,
+      "COLUMN NAME ONE" data_type NOT NULL,
+      "COLUMN NAME TWO" data_type NOT NULL,
+      "COLUMN NAME THREE" data_type NOT NUL,
+);
+The id column helps easily identify and search for item such as a flight at an airport. The autoincrement allows sql to add the next available id to the new item in the table.
+You can add different constraints such as default, check to see if a condition is met, or unique to make sure every area is unique.
+To add data you use the insert command as shown:
+  INSERT INTO "table_name"
+        (column_one,column_two,column_three)
+        VALUES ("C1_data","C2_data","C3_data");
+Speech marks are only required for strings not integers or real data.
+To get data out of a table you use the select command:
+  SELECT * FROM table_name;
+The asterix is used to retrieve all available data however to be more specific you can replace the asterix with the row names by using SELECT * FROM table_name WHERE id = 3; or search for columns in smaller table by using SELECT column_name FROM table_name;.
+To create a sql file use touch name.sql and then access that file by using sqlite3 name.sql.
+You can create more sophisticated queries using logic operators such as and/or, you can also just use a wildcard like %a% which would find every item with an a.
+To update data use the update command by using:
+UPDATE table_name
+      SET duration = 75
+      WHERE origin = "New York"
+      AND destination = "LONDON";
+This would change the duration of every flight originating from new york and and going to lodnon to have a flight duration of 75 minutes.
+To delete data you use the delete command by doing this:
+DELETE FROM flights WHERE destination = "Tokyo"; 
+THis would delete every row from the table where the flights destination was tokyo.
+You can use foreign keys to link two different tables that are somehow related.
+There are many different type of relationships such as many to many one to many and so on.
+You can have associated tables which just merge and represent information from two other or more other tables. Do achieve this you can use a join query after creating ids in each different table so a command such as:
+SELECT first, origin,destination 
+      FROM flights JOIN passengers
+     ON  passengers.flight_id = flights.id;
+This allows sql to fill information into the associated tabl rather than us having to do it manually.
+You can create index's to make querying more efficient with the cmd CREATE INDEX.
+One vulnerability is sql injection which can occur where specific querying can result in leaking of information such as usernames , passwords and other sensitive information.
+To solve this you can escape the text fields using a backslash to tell sql to ignore sql specific syntax or abstracting the checks via frameworks like django.
+Race conditions might occur if there is transactions working at the same time. Rhis can be fixed by locking the database so only one transaction can happen at the same time.
+
+Django Models Section Begins:
+
+Models are a way to represent a class that you want to store inside  a database.
+Thire time is the charm.
+You can create superusers to access the admin panel/site admin interface to edit imported models via the web. Account details for this projects are Username: Neel and Password: superuser123
+Use python manage.py createsuperuser to make a new admin account.
+Also you can use python rather than python3 because you downloaded the python extension.
+
