@@ -1,0 +1,10 @@
+Django is a python web framework that dynamicalkly generates html and css code based on our python programming which allows for websites to change based on user interaction and allows us to create dynamic webpages rather than just static webpages.
+This framework works upon the HTTP protocol which is how clients and devices talk across the internet using requests and responses.
+Responses return a numeric code which indicates how the request went. Some of the most common are 200 which means everything is ok, 301 meaning moved permanently, 403 forbidden, 404 not found and 500 meaning an internal server error occured generally meaning buggy code.
+Use django-admin startproject to create a new django project. It will generate a new folder with a few files such as manage.py, urls.py and settings.py
+Django has the ability to create multiple apps per project.
+For every variable you are using that is prebulit by django you need to import it.
+In django you can seperate the html from the python code by rendering an entire html file rather than individual strings.
+You can use time-sensitive elements by using the datetime feature and load static files seperately to seperate files that wont change like css and javascript files from dynamic files like our is it easter file.
+YOu can secure your websites using the csrf token command.
+
