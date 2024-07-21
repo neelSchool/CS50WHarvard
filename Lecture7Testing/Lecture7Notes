@@ -1,0 +1,23 @@
+Testing is simply checking that a developer's code is working as intended whilst CI and CD (continuous integration and delivery) is making sure that code can be integrated and deployed into the given systems easily and quickly.
+One way to test a function in python is the assert command which will give an error or exception if something isn't working correctly.
+If the function is working properly then the assert command won't output anything in the terminal and go onto the next line of code however, if it isn't working as intended it will output an exception in the terminal.
+Just like there are libraries for js, css and react there are also libraries for testing code and one library for this is called unittest which can be directly imported into python using import unittest.
+There are 3 sub-commands under assert which are assertTrue to check/say something is true, assertFalse to check/say something is false and assertEqual to check whether 2 numbers are equal.
+In all django applications there is a tests.py file which create a seperate database from wherre the rest of your data is stored which you can use for testing and defining what data should and should not be accepted.
+To run tests in django you need to use the command python manage.py test
+You can also use assertEqual with response.status_code to check what happens when a specific webpage is loaded and what status code was relayed so 200 means everything is ok, 404 page not found and so on.
+To do front-end/user-side testing you can use browser testing software such as selenium with a webdriver which allows the tesing software to control the browser and test using any library for example unittest.
+Continuous integration is one best practice when coding in groups/teams when trying to devlop a project as it means there are frequent merges to the main branch of code to prevent lots of conflict errors and incompatability of features if a group tries to make lots of big changes seperately and just tries to merge the changes at the end.
+Another key idea of CI is automated unit testing to test integrations and each small function whenever a change is made. This is to reduce the chances of one merge breaking the whole project.
+Continuous delivery is another best practice which refers to how code is deployed, whihc is to incrementally deploy changes more frequently so maybe daily or weekly rather than deploying a huge project at the end of a long cycle of months which could result in unforseen scenarios and error occuring.
+This also allows users to get updates and access to new features more often, which is important in a competitive technology market.
+One way to test new changes that have been pushed to the master branch on github is to use github actions which is a feature of github that allows you to define automated checks that should happen when new code is uploaded to your project to enforce certain policies and check for erros such as following a company's style guide or making sure nothing stops working because of the new code.
+Github actions and other similar workflows working on and are formatted using YAML which is formatted in key value pairs. For example:
+key1: value1
+key2: value2
+key3: 
+     -item1
+     -item2
+     -item3
+The extensions for YAML files are .yml and .yaml
+To standardies versions of different libraries and environments you can use docker containers which will have set of instructions that lists all the different packages and libraries that should be installed on the docker containers.
