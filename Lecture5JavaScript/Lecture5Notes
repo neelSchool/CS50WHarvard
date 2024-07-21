@@ -1,0 +1,10 @@
+JavaScript enables us to create code that will work on the front-end/client side of our website.
+To use javascript in our websites you need to add script tags to tell the browser to read everything inside those tags as javascript.
+With javascript you can add event listeners to allow for a website to respond depending on how the user is interacting with the website.
+To tell js to substite a value into a location you need to use ${} while in python you need to use just {}.
+To check for a remainder use the mod function which is represented by the % percent symbol and to have a formatted string in javscript you use the back speech marks which are on the key above tab.
+It is best practice to not mix html and javascript code in your web pages however this can lead to logical errors because a web browser loads the webpage top to bottom so if your javscript code references a html elemnt which is further down in the file's code, that hasnt been loaded yet, the code will not work as intended and an error will be generated in the javascript console which can be reahed by right clicking and clicking inspect and console.
+The way to fix this error is to add another event listener with the DOMContentLoaded tag and an anonymous (un-named) function and to put the evnt query in curly brackets inside this new event listener to resolve the issue.
+To use data from a user's past visits to our websites we can use the local storage command to store data on the users device so that we can streamline later visits to our page such as auto adjusting settings to their preferences.
+YOu can also connect API's to your webpage to transfer data in a human and machine readable format known as json (pronounced jason) which stands for JavaScript Object Notation.
+So far all the javascript we have been running has been on our own device and all on the web browser however we can use AJAX (asynchronous JavaScript) to make request even after the webpage is done loading and this is where API's come into play.
