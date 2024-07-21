@@ -1,0 +1,29 @@
+Git is a version control tool that can be used to make more complex websites. It is a command line tool that allows us to track changes when writing code by creating snapshots without having a mess of files, also Git allows us to synchronize work between different people.
+A file is known as a repository.
+Git also allows us to test changes to our code without losing the original code by making us work on a different brnach seperate to the original.
+Using Git we can also revert back to old versions of our code easily.
+Git projects need to be stored online, using a host such as Github.
+Git clone is the command to download a repository onto your computer.
+Git doesnt support authentication so just continue with normal files.
+Savepoints in git are knwon as commits. Use git add <filename> to track commits to the file.
+To save a snapshot of the current state of the repository by using the command git commit -m "message". The message is a note to describe and keep track of changes using normal english/whatever language you speak. Git will respond saying x file changed an x insertions (each insertion is a line changed in the repository.)
+These commits are only made on your local version. To make these updates on the online version using the command git push.
+You can check the status of your local version compared to the original version online using the command git status.
+If you want to add all the files you have changed and want to make a commit at the same times use the shortcut git commit -am "message". Change the message to patch notes.
+If the version on github is more upto date that your local versioon you can take the updated changes from the online version onto your local version by using the command git pull.
+You can also edit github repositories directly from the graphical user interface (GUI) on github.
+Merge Conflicts:
+Where two people have changed the same thing but both try and make a commit. You will recieve a conflict (content) error which if you open will have addded metadata from github which can be cryptic looking but can be easily decrypted. All the parts between < and an equal sign are your changes, all the parts betweeb the equal sign and > are the other person's changes. These are the conflicting sections which  needed to fixed before a commit can be made. There will also a sequence of a numbers and charactersd which is a  hash to view the conflicting commit. 
+These conflicts can be as simple as two people changing the same line by adding styling. YOu can modify the file to resolve based on your inuition maybe you take only your change, only the other person's changes or maybe you take both. It is completely your decision as the developer.
+Git log is a useful command to see every commit, author and date and hash of every change.
+YO can use the git reset command to revert the current state of a repository to an older commit using git reset --hard <commit hash> or reset your local repository to the one on github using the command git reset --hard origin/master.
+Branching is where you can work on different areas of the code and then if a bug is found yooou can create a new seperate branch on the origin branch which is stable without affecting maybe a new feature you have been working on which might not be as stable of a version.
+Your head is which area your working on. the stable version is known as the master branch. When you are happy that everything is stable and working satisfactorily you can merge branches into the original master branch.
+Using the command git branch will tell you which branch you are on and which branches exist in the repository. 
+If you want to create a new branch you and go onto the new branch use the command git checkout -b <branchName>
+If you now use the git branch command it will add a star and highlight the branch you are currently on. To switch between branches use git checkout <branchName>.
+Any changes made to one branch will not affect other branches unless merged using the command git merge <other branch name you want to merge>.
+This may result in amerge conflict which needs to be resolved as before based on your own intuition.
+If you want to  make changes to open source software such as bootstrap or linux os you can fork the repository, download it on your device and make changes which you can then submit on github as a pull request and if the moderators approve your updates they will merge it into the bootstrap code which then can be used by anyone anf forked again to improve software or find and fix bugs.
+You can host your own website using github pages by creating a new repository on github called YourUserName.github.io. If you go onto settings and upload the website to the internet it woill host your own website for free on Github.
+END OF LECTURE 1 ON GIT. 
